@@ -1,0 +1,102 @@
+:root {
+    --accent-color: hsl(0, 100%, 100%);
+    --dark-accent-color: hsl(0, 0%, 80%);
+    --background-color: hsl(0, 0%, 15%);
+    --dark-background-color: hsl(0, 0%, 5%);
+    --light-background-color: hsl(0, 0%, 30%);
+    --red: hsl(360, 90%, 55%);
+    --green: hsl(120, 90%, 35%);
+}
+
+* {
+    background-color: var(--background-color);
+    font-family: Roboto;
+    outline: none;
+    border: none;
+}
+
+#mainframe {
+    width: 90%;
+    height: 90%;
+    margin-left: 3%;
+    margin-top: 5%;
+}
+
+#mainframe #ioframe {
+    width: 70%;
+    height: 80%;
+    position: absolute;
+}
+#new, #list {
+    width: 100%;
+    padding: 10px;
+    background-color: var(--light-background-color);
+}
+#new {
+    font-size: 8vh;
+    height: 20%;
+    color: var(--accent-color);
+    margin-bottom: 5%;
+}
+#list {
+    font-size: 30px;
+    height: 75%;
+    overflow: auto;
+    padding: 2px;
+}
+
+#mainframe #buttonframe {
+    width: 20%;
+    height: 80%;
+    right: 3%;
+    position: absolute;
+}
+#add, #addAll, #rem, #remAll, #enabled {
+    width: 100%;
+    height: 10%;
+    font-size: 30px;
+    background-color: var(--light-background-color);
+    color: white;
+}
+#enabled {
+    appearance: none;
+    -webkit-appearance: none;
+    outline: none;
+    background-color: var(--red);
+
+}
+#add, #addAll, #currentTabsList, #rem, #remAll {
+    margin-bottom: 5%;
+}
+#add:hover, #addAll:hover, #rem:hover, #remAll:hover, #enabled:hover {
+    cursor: pointer;
+}
+#addAll {
+    background-color: var(--green);
+}
+#currentTabsList {
+    background-color: var(--light-background-color);
+    width: 100%;
+    height: 41%;
+    overflow: auto;
+    font-size: 20px;
+    padding: 2px;
+    color: red;
+}
+option {
+    color: var(--dark-accent-color);
+    background-color: var(--light-background-color);
+}
+option:hover:not(:disabled) {
+    background-color: var(--background-color);
+}
+
+select::-webkit-scrollbar-track {
+    background-color: var(--dark-background-color);
+}
+select::-webkit-scrollbar {
+	width: 12px;
+}
+select::-webkit-scrollbar-thumb {
+	background-color: var(--light-background-color);
+}
