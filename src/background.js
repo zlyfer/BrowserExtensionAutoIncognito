@@ -30,9 +30,9 @@ function incog(tabID, changeInfo, tab) {
         for (var i = 0; i < websites.length; i++) {
             if (tab.url.indexOf(websites[i]) > -1) {
                 if (changeInfo.status == "loading") {
+                    chrome.windows.create({'url': tab.url, 'focused': true, 'incognito': true});
                     chrome.history.deleteUrl({url: tab.url});
                     chrome.tabs.remove(tabID);
-                    chrome.windows.create({'url': tab.url, 'focused': true, 'incognito': true});
                     break;
                 }
             }
